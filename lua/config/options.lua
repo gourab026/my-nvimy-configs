@@ -36,6 +36,7 @@ opt.cursorline = true       -- Hightlight current line
 opt.signcolumn = "yes"      -- ALways show sign column (prevent text shifting). The signcolumn option manages the column on the left side of the editor window where signs are displayed. Signs are visual markers that convey information about specific lines in a file.
 opt.wrap = false            -- Don't wrap lines
 opt.cmdheight = 1           -- Height of the command bar
+vim.opt.mouse = "a"         -- Enable mouse support
 
 
 -- Splits

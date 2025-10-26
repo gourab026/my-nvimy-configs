@@ -10,9 +10,18 @@ Lazy.nvim is a modern plugin manager with automatic lazy-loading, fast startup t
 
 ]]
 
--- Bootstrap lazy.nvim
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim" -- Auto install lazy.nvim if not present
 
+-- UI settings
+ui = {
+  border = "rounded",
+  size = {
+    width = 0.8,
+    height = 0.8,
+  },
+}
+
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 -- Autoinstall lazy.nvim if not present
 if not vim.loop.fs_stat(lazypath) then
@@ -26,34 +35,34 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
+  -- Performance settings
+performance = {
+  cache = {
+    enabled = true,
+  },
+  reset_packpath = true,
+  rtp = {
+    reset = true,
+    paths = {},
+    disabled_plugins = {},
+  },
+}
+
+
 -- Add lazy.nvim to runtimepath
 vim.opt.rtp:prepend(lazypath)
 
+-- Set leader key BEFORE lazy setup
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 -- Set up lazy.nvim
 require("lazy").setup({
-  -- Import all the plugins from /lua/plugins/
-  { import = "plugins" },
-}, {
-  -- Lazy.nvim configuration
+  spec = { { import = "plugins" } },  -- Import all plugins from /lua/plugins/
+  install = { colorscheme = { "vague" } },  -- Use Vague as fallback colorscheme during install
   checker = {
-    enable = true,           -- Automatically check for plugin updates
-    notify = false,          -- Don't notify about updates
+    enabled = true,                    -- Check for plugin updates
+    notify = false,                    -- Don't notify about updates (optional)
   },
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

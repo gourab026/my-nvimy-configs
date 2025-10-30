@@ -261,6 +261,9 @@ vim.keymap.set("i", "<C-e>", function()  -- for insert mode
 end, { desc = "File browser" })
 
 
+---- Comments key binding
 
+vim.keymap.set("x", "<leader>cc", "<Plug>(comment_toggle_linewise_visual)", { desc = "Comment visual lines" })
+vim.keymap.set("n", "<leader>cc", "<Plug>(comment_toggle_linewise_current)", { desc = "Comment current line" })
 
 

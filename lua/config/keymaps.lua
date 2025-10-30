@@ -267,3 +267,13 @@ vim.keymap.set("x", "<leader>cc", "<Plug>(comment_toggle_linewise_visual)", { de
 vim.keymap.set("n", "<leader>cc", "<Plug>(comment_toggle_linewise_current)", { desc = "Comment current line" })
 
 
+---- blink.cmp ctrl+k for signature (show function details)
+vim.keymap.set('n', '<leader>kk', function()
+  require('blink.cmp').toggle_signature_help()
+end, { silent = true, desc = "Toggle signature help" })
+
+
+
+
+
+

@@ -251,9 +251,14 @@ vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find b
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Help tags" })
 vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Recent files" })
 
+-- Telescope file browser with Ctrl+E
+vim.keymap.set("n", "<C-e>", function()  -- for normal mode
+    require("telescope").extensions.file_browser.file_browser()
+end, { desc = "File browser" })
 
-
-
+vim.keymap.set("i", "<C-e>", function()  -- for insert mode
+    require("telescope").extensions.file_browser.file_browser()
+end, { desc = "File browser" })
 
 
 

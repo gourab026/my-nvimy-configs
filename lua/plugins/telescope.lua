@@ -73,21 +73,9 @@ return {
     },
 
     -- Lazy load the plugin. It will only be loaded when the :Telescope command is run.
-    cmd = "Telescope",
+    -- cmd = "Telescope",
 
-    -- Keymaps to trigger Telescope commands. These also act as lazy-loading triggers.
-    keys = {
-        -- Find files
-        { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-        -- Grep for text in the current working directory
-        { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
-        -- Find open buffers
-        { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find buffers" },
-        -- Find help tags
-        { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help tags" },
-        -- Find recently opened files
-        { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent files" },
-    },
+
 
     -- Configuration function, runs after the plugin is loaded
     config = function()

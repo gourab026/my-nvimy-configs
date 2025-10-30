@@ -5,7 +5,7 @@
 -- Set leader key first (used in keymaps)
 vim.g.mapleader = " "       -- Space as leader key : A prefix for custom keymaps (we'll use this in keymaps)
 vim.g.maplocalleader = " "  -- Space as local leader
-
+vim.opt.timeoutlen = 500  -- Wait 500ms for leader key sequences
 
 -- Create shorter aliases for vim.opt
 local opt = vim.opt

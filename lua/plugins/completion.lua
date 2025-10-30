@@ -59,6 +59,12 @@ return {
         end
 
         cmp.setup({
+
+            -- Auto-completion control
+            completion = {
+                autocomplete = false
+            },
+
             -- Snippet configuration
             snippet = {
                 expand = function(args)

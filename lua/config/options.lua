@@ -13,7 +13,7 @@ local opt = vim.opt
 
 -- Line numbers
 opt.number = true           -- Show absolute line numbers
-opt.relativenumber = true   -- Show relative line numbers
+opt.relativenumber = false   -- Show relative line numbers
 -- Why ? Helps with motion commands (5j moves down 5 lines)
 
 
